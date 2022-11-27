@@ -1,0 +1,178 @@
+.project-card{
+    width: 100%;
+    height: 32rem;
+    background-color: transparent;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    animation: fadeIn .5s ease-in-out calc(var(--style) * 300ms + 5s) forwards;
+    opacity: 0;
+
+      &-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      
+      &:hover &-inner {
+        transform: rotateY(180deg);
+      }
+      
+      &-front, &-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        border-radius: var(--br-md);
+        box-shadow: var(--box-shadow-light);
+    }
+    
+    /* Style the front side (fallback if image is missing) */
+    &-front {
+        background: var(--bg-teal-primary);
+        padding: 3px;
+
+        &__inner{
+          background: var(--bg-dark-primary);
+          width: 100%;
+          height: 100%;
+          border-radius: var(--br-md);
+          overflow: hidden;
+        }
+        
+        
+        &__image-div{
+          position: relative;
+          & img{
+            width: 100%;
+            display: block;
+            object-fit:fill;
+          }
+          & span{
+            position: absolute;
+            top: 100%;
+            right: 5%;
+            padding: 5px 2rem;
+            background:var(--bg-teal-primary);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--color-primary-light);
+            border-radius: var(--br-lg);
+            box-shadow: var(--box-shadow-dark);
+            transform: translateY(-50%);
+          }
+        }
+
+        
+        &__tech-stack{
+          display: flex;
+          padding: 3.4rem 2rem 0;
+          flex-direction: column;
+          gap: 1rem;
+          span{
+              font-size: 1.2rem;
+              display: flex;
+              gap: 4px;   
+              text-align: left;  
+              align-items: center;       
+              & svg{
+                font-size: 1.8rem;
+              }
+              &:nth-child(1){
+                align-items: flex-start;
+              }
+          }
+        }
+
+        &__icons-div{
+          padding: 4rem 2rem 0 ;
+          height: 15rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          & svg{
+            font-size: 1.6rem;
+          }
+          
+          & span{
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+          }
+        }
+      }
+      
+      /* Style the back side */
+      &-back {
+        background: var(--bg-teal-primary);
+        padding: 3px;
+        transform: rotateY(180deg);
+        &__inner{
+          background: var(--bg-dark-primary);
+          width: 100%;
+          height: 100%;
+          border-radius: var(--br-md);
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          justify-content: space-evenly;
+
+        & .heading{
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: block;
+          }
+
+          & .detail{
+            font-size: 1.2rem;
+            line-height: 1.2;
+          }
+
+          & .project-concepts{
+            & .concepts{
+              display: flex;
+              flex-wrap: wrap;
+              list-style:none;
+              column-gap: 1rem;
+              row-gap: .5rem;
+              margin-top: 2rem;
+
+              & li{
+                flex:  0 0 calc(50% - .5rem);
+                &::after{
+                  position: absolute;
+                  content: "";
+                  top: 50%;
+                  left: -.2rem;
+                  width: .5rem;
+                  height: .5rem;
+                  border-radius: 50%;
+                  background: var(--bg-light-primary);
+                  transform: translateY(-50%);
+              }              }
+            }
+          }
+        }
+      }
+}
+
+
+// 
+// , , ,
+//                 , , , , ,, ,
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

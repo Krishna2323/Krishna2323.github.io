@@ -1,0 +1,12 @@
+& .hero-picture{
+    justify-content: flex-end;
+    filter: grayscale(100%);
+
+    & img{
+        width: 30rem;
+        object-fit: cover;
+        // box-shadow: 2rem 2rem 2rem rgba(0,0,0,.2);
+        filter: drop-shadow(05px -10px 5px rgba(0, 0, 0, 0.2));
+
+    }
+}

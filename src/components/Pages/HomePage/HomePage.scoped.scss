@@ -1,0 +1,58 @@
+ .home-pages{
+    width: 100%;
+    // height: 100%;
+    flex-direction: column;
+    z-index: 1000;
+    flex:  0 0 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+
+
+    & >*:not(.hero,.header,footer){
+        margin-bottom: 10rem;
+    }
+
+    &::-webkit-scrollbar {
+        width: 1.2em;
+        padding: 0.5rem;
+        // transform: translateX(3rem);
+      }
+    
+      &::-webkit-scrollbar-track {
+        background-color: #dcdcdc;
+        display: block;
+        width: 1.2rem;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background: var(--bg-teal-primary);
+        border-radius:2px;  
+        padding: 0.5rem;
+      }
+    
+    &--open{
+        animation: on-display 1s forwards   ;
+    }
+    &--close{
+        animation: on-display-close 1s forwards   ;
+    }
+}
+
+@keyframes on-display {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes on-display-close {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

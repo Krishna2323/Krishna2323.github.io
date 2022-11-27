@@ -1,0 +1,36 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 5;
+    backdrop-filter: blur(2px);
+  
+    &-open {
+      animation: backdropIn .5s forwards;
+    }
+  
+    &-closed {
+      animation: backdropOut .5s forwards;
+    }
+  }
+  
+  @keyframes backdropIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes backdropOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }

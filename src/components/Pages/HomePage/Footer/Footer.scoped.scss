@@ -1,0 +1,18 @@
+.footer{
+    padding-bottom: 0;
+    width: 100%;
+    &-inner{
+        box-shadow: var(--box-shadow-dark);
+        width: 100%;
+        background:var(--bg-teal-primary);
+        border-top-left-radius: var(--br-sm);
+        border-top-right-radius: var(--br-sm);
+        padding: 5px 2px 0;
+        &-inner{
+            height: 40rem;
+            background:var(--bg-dark-primary);
+            border-top-left-radius: var(--br-sm);
+            border-top-right-radius: var(--br-sm);
+        }
+    }
+}

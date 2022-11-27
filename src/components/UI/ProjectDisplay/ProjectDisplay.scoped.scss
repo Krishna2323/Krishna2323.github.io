@@ -1,0 +1,54 @@
+.project-view{
+    // position: absolute;
+    // top: 0%;
+    // left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    opacity: 0;
+    flex: 0 0 100%;
+    // transform: translate(100%);
+    transition: all .8s;
+    position: relative;
+
+
+    & iframe{
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: var(--br-md);
+        box-shadow:var(--box-shadow-dark);
+        z-index: 7;
+        position: relative;
+    }
+    & .iframe-loaded{
+        animation: backdropIn 1s forwards;
+    }
+    
+&-open {
+    animation: backdropIn 1s forwards;
+  }
+
+  &-closed {
+    animation: backdropOut 1s forwards;
+  }
+}
+
+
+@keyframes backdropIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes backdropOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0%;
+  }
+}

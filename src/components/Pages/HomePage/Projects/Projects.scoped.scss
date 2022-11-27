@@ -1,0 +1,14 @@
+.projects-section{
+    width: 100%;
+    // min-height: 70vh;
+    // height: 100%;
+    flex: 0 0 100%;
+    // background: var(--bg-dark-primary);
+
+    & .projects{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5rem;
+    }
+
+}
