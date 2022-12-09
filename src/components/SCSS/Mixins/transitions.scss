@@ -1,0 +1,25 @@
+@mixin btn-hover-primary($bg) {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .5s;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background: $bg;
+        z-index: -1;
+        transition: all .5s;
+    }
+
+    &:hover{
+        transform: scale(1.05);
+        &::after{
+            transform: translateX(-20%);
+        }
+    }
+}

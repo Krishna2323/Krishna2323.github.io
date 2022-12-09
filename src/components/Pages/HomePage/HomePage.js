@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <Transition in={true} mountOnEnter unmountOnExit timeout={1000}>
       <div className={`home-pages home-pages--${display ? "open" : "close"}`}>
-        <Header />
+          <Header />
           <Hero />
           <Projects />
           <Resume/>

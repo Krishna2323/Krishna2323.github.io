@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./ProjectCard.scoped.scss";
-import { BsClockHistory } from "react-icons/bs";
-import { ImStack } from "react-icons/im";
+import { BsCheck2All } from "react-icons/bs";
+import { IoCloseOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { projectDisplaySliceAction } from "../../../store/ProjectDisplaySlice/ProjectDisplaySlice";
 
@@ -19,9 +19,9 @@ const ProjectCard = (props) => {
       })
     );
   };
-  
+
   return (
-    <div onClick={handleCardClick} className="project-card" style={{"--style":props.cardIndex}}>
+    <div className="project-card" style={{ "--style": props.cardIndex }}>
       <div className="project-card-inner">
         <div className="project-card-front">
           <div className="project-card-front__inner">
@@ -32,16 +32,22 @@ const ProjectCard = (props) => {
             <div className="project-card-front__tech-stack">
               <span>
                 <span>
-                  <ImStack />:
+                  {/* <ImStack />: */}
+                  Tech Stack:
                 </span>
-                JavaScript, React, Redux, HTML, SCSS, Node.js, Express.js,
-                Stripe.js,
+                JavaScript, React, Redux, HTML
+              </span>
+              {/* ///////////////////////// */}
+              <span>
+                {/* <BsClockHistory />: 2 Months{" "} */}
+                <span>Time Spent:</span>2 Months
               </span>
               <span>
-                <BsClockHistory />: 2 Months{" "}
-              </span>
-              <span>
-                <BsClockHistory />: 2 Months{" "}
+                <span>Responsive:</span>
+                {/* 15 */}
+                {/* <BsClockHistory />: 2 Months{" "} */}
+                <BsCheck2All />
+                <IoCloseOutline />
               </span>
             </div>
             {/* <div className="project-card-front__icons-div">
@@ -53,11 +59,10 @@ const ProjectCard = (props) => {
             <div className="project-details">
               <span className="heading">Project Details:</span>
               <p className="detail">
-                I completed this project while learning advanced JavaScript
-                concepts from The Complete JavaScript Course by Jonas Scmetmann
-                on Udemy. This project covered almost every concept of
-                JavaScript and some advanced techniques to build complex
-                front-end designs.
+                This project was focused on learning best practices with HTML,
+                learning CSS from basics to some advanced technique and after
+                that basics of SASS/SCSS. This project also tought me the
+                techniques to build responsive websites using Grid/Flexbox.
               </p>
             </div>
             <div className="project-concepts">
@@ -76,6 +81,12 @@ const ProjectCard = (props) => {
                 <li> Modern Operators</li>
                 <li>"call", "apply" & "bind" Methods</li>
               </ul>
+            </div>
+            <div className="project-links">
+              {/* <button className="btn-secondary">More Details</button> */}
+              <button onClick={handleCardClick} className="btn-secondary">
+                View Project
+              </button>
             </div>
           </div>
         </div>

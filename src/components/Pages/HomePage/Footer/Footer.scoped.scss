@@ -1,18 +1,111 @@
-.footer{
-    padding-bottom: 0;
+.footer {
+    padding-bottom: 0 !important;
     width: 100%;
-    &-inner{
+    
+    &-inner {
+        overflow: hidden;
         box-shadow: var(--box-shadow-dark);
         width: 100%;
-        background:var(--bg-teal-primary);
+        background: var(--bg-teal-primary);
         border-top-left-radius: var(--br-sm);
         border-top-right-radius: var(--br-sm);
-        padding: 5px 2px 0;
-        &-inner{
-            height: 40rem;
-            background:var(--bg-dark-primary);
+        padding: 5px 0px 0;
+
+        &-inner {
+            background: var(--bg-dark-primary);
             border-top-left-radius: var(--br-sm);
             border-top-right-radius: var(--br-sm);
+            padding: 1rem 1rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & h4{
+                font-weight: 100;
+                font-size: var(--step-0);
+                margin-bottom: 2.8rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            & .footer-links{
+                display: flex;
+
+                & .links{
+                    background-color:#1a1d20 ;
+                    padding: 2rem;
+                    // flex-direction: column;
+                    display: flex;
+                    // flex-direction: column;
+                    align-self: center;
+                    justify-content: space-evenly;
+                    border-top-left-radius: 11px;
+                    border-radius: 11px;
+                    // align-self: flex-end;
+                    gap: 3rem;
+                    transform: translateY(8%);
+                    filter: drop-shadow(5px 0px 5px rgba(48, 121, 189) )  drop-shadow(-5px 0px 5px #c2255c );
+                    
+                    & a{display: block;
+                        width:5.2rem;
+                        height: 5.2rem;
+                        // flex: 0 0 calc(25% - 1rem);
+                        background-color:#1a1d20 ;
+                        box-shadow:  6px 6px 28px #0a0c0d,
+                        -6px -6px 28px #2a2e33;
+                        border-radius: 50%;
+                        outline: 3px dashed #343a40;
+                        padding: 1rem;
+                        display: flex;
+                        align-items: center;
+                        transition: all .4s;
+                        position: relative;
+                        overflow: hidden;
+                        z-index: 2;
+
+                        &:hover{
+                            transform: scale(1.2);
+                            outline: 2px #dee2e6;
+                            outline-style:solid;
+
+                            &::after,&::before{
+                                width: 50%;
+                                border-width: 1px;
+                            }
+                        }
+
+                        & > svg{
+                            position: relative;
+                            z-index: 1;
+                        }
+                        & > img{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            z-index: 1;
+                        }
+                        &::after,&::before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            width: 0%;
+                            height: 100%;
+                            background: var(--bg-dark-primary);
+                            z-index: 0;
+                            transition: all .3s;
+                        }
+                        &::after{
+                            left: 0;
+                            border-right: 0px solid #868e96;
+                        }
+                        &::before{
+                            border-left: 0px solid #868e96;
+                            right: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }

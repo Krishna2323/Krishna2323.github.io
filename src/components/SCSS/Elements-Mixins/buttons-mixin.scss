@@ -1,0 +1,12 @@
+@use "../Mixins/transitions.scss";
+@mixin btn($font-size,$padding,$bg,$color){
+    @include transitions.btn-hover-primary($bg);
+    background: none;
+    border: none;
+    border-radius: var(--br-lg);
+    border-radius: 29px;
+    padding:calc($padding / 2) calc($padding + 5px);
+    font-size:$font-size;
+    color:$color;
+    cursor: pointer;
+}

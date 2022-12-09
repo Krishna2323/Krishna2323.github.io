@@ -1,3 +1,4 @@
+@use "./Elements-Mixins/buttons-mixin.scss" as button;
 p{
     font-size: var(--step--1);
     font-weight: 300; 
@@ -23,4 +24,11 @@ li{
         transform: translate(-50%,-50%);
         z-index: 6;
     }
+}
+
+.btn-primary{
+}
+
+.btn-secondary{
+    @include button.btn(var(--step--2),1.5rem,var(--bg-teal-primary),var(--color-primary))
 }

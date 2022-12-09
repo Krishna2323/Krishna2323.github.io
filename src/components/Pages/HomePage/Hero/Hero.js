@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import "./Hero.scoped.scss";
 import HeroIcons from "./HeroIcons";
-import PR_SS_01 from "../../../assets/Images/Hero-Sections/PR-SS-01.png";
-import PR_SS_02 from "../../../assets/Images/Hero-Sections/PR-SS-02.png";
-import PR_SS_04 from "../../../assets/Images/Hero-Sections/PR-SS-04.png";
+import Forkify from "../../../assets/Images/Hero-Sections/Forkify.png";
+import Omnifood from "../../../assets/Images/Hero-Sections/Omnifood.png";
+import Bankist from "../../../assets/Images/Hero-Sections/Bankist.png";
 
 const Hero = () => {
   return (
-    <section className="hero ">
+    <section className="hero " id="hero">
       <div className="hero-text container">
         <span>
           Hello, <span>I'm Krishna,</span>
@@ -16,10 +16,13 @@ const Hero = () => {
           </span>
         </span>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-          aliquet, neque in posuere euismod, dui eros congue velit, non
-          consequat orci arcu in mauris. In fringilla ante vitae ullamcorper
-          bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          A self-taught full-stack developer with ability to learn and
+          collaborate in rapidly changing environmets and compositions. Started
+          learning full-stack devlopement at the age of 16 through 600+ hours of
+          bootcamp structure. I have used my time to bring beautiful, responsive, and
+          accessible website for the user. Eager to tackel web
+          development/design challenges to achieve lasting impacts on user
+          experience.
         </p>
         <HeroIcons />
       </div>
@@ -32,12 +35,12 @@ const Hero = () => {
             "--image-num": 0,
           }}
         >
-          <img src={PR_SS_01} alt="Project-SS-01" />
+          <img src={Forkify} alt="Project-SS-01" />
           <div>
             <div>
-            <span></span>
-            <span></span>
-            <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>
@@ -48,12 +51,12 @@ const Hero = () => {
             "--image-num": 1,
           }}
         >
-          <img src={PR_SS_02} alt="Project-SS-02" />
+          <img src={Bankist} alt="Project-SS-02" />
           <div>
             <div>
-            <span></span>
-            <span></span>
-            <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>
@@ -64,12 +67,12 @@ const Hero = () => {
             "--image-num": 2,
           }}
         >
-          <img src={PR_SS_04} alt="Project-SS-04" />
+          <img src={Omnifood} alt="Project-SS-04" />
           <div>
             <div>
-            <span></span>
-            <span></span>
-            <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>

@@ -1,81 +1,94 @@
-.special-text{
-    background: var(--bg-teal-primary);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-weight: 400;
-    font-size: var(--step-4)  !important;
-    margin-top: .5rem;
-    line-height: .95 !important;
-    filter: brightness(130%);
-    padding-bottom: .9rem ;
+@import url("./Mixins/transitions.scss");
+
+
+.special-text {
+  background: var(--bg-teal-primary);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 400;
+  font-size: var(--step-4) !important;
+  margin-top: .5rem;
+  line-height: .95 !important;
+  filter: brightness(130%);
+  padding-bottom: .9rem;
 }
 
-.container{
-    padding: 2rem 8rem;
-    @media (max-width: 75em) {
-        padding: 2rem 4rem;
-      }
-    
-      @media (max-width: 56.25em) {
-        padding:5rem 10rem;
-      }
-    
-      @media (max-width: 37.5em) {
-        padding: 4rem;
-      }
-      @media (max-width: 28.125em) {
-        padding: 3rem 2rem;
-      }
+.container {
+  padding: 2rem 8rem;
+
+  @media (max-width: 75em) {
+    padding: 2rem 4rem;
+  }
+
+  @media (max-width: 56.25em) {
+    padding: 5rem 6rem;
+  }
+
+  @media (max-width: 37.5em) {
+    padding: 4rem;
+  }
+
+  @media (max-width: 28.125em) {
+    padding: 3rem 2rem;
+  }
 }
 
-.bg-dark-first{
+.bg-dark-first {
   position: relative;
   z-index: 2;
-  & > *{
+
+  &>* {
     position: relative;
     z-index: 3;
   }
-  &::after,&::before{
+
+  &::after,
+  &::before {
     content: "";
     position: absolute;
     width: 50%;
-    top:0;
+    top: 0;
     height: 100%;
     z-index: 1;
   }
-  
-  &::after{
-    background:var(--bg-dark-primary);
+
+  &::after {
+    background: var(--bg-dark-primary);
     left: 0;
   }
-  &::before{
+
+  &::before {
     background: var(--bg-teal-primary);
     right: 0;
   }
 }
 
-.bg-teal-first{
+.bg-teal-first {
   position: relative;
   z-index: 2;
-  & > *{
+
+  &>* {
     position: relative;
     z-index: 3;
   }
-  &::after,&::before{
+
+  &::after,
+  &::before {
     content: "";
     position: absolute;
     width: 50%;
-    top:0;
+    top: 0;
     height: 100%;
     z-index: 1;
   }
-  
-  &::after{
-    background:var(--bg-teal-primary);
+
+  &::after {
+    background: var(--bg-teal-primary);
     left: 0;
   }
-  &::before{
+
+  &::before {
     background: var(--bg-dark-primary);
     right: 0;
   }
@@ -83,7 +96,7 @@
 
 ///////////////HEADINGS
 
-.heading-primary{
+.heading-primary {
   font-size: var(--step-4);
   font-weight: 300;
   margin: 0 auto 5rem auto;
@@ -91,4 +104,26 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+// LINKS
+
+.link {
+  position: relative;
+  transition: all .3s;
+  // color: aqua;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--bg-teal-primary);
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+  }
 }

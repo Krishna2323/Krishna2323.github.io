@@ -6,9 +6,15 @@
     // background: var(--bg-dark-primary);
 
     & .projects{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
+        display: flex;
+        flex-wrap: wrap;
+        // grid-template-columns: repeat(3,1fr);
         gap: 5rem;
+        row-gap: 7rem;
+        place-content: center;
+        // align-items: ;
+        justify-items: center;
+        justify-content: space-evenly;
     }
 
 }
