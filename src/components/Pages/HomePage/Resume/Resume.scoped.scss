@@ -30,6 +30,10 @@
                 grid-template: repeat(12, 6.7vh) / repeat(10, 1fr);
             }
 
+            @media (max-width:56.25em) {
+                grid-template: repeat(12, 7.5vh) / repeat(10, 1fr);
+            }
+
             @media (max-width:600px) {
                 grid-template: repeat(16, 6.3vh) / repeat(10, 1fr);
             }
@@ -42,11 +46,26 @@
                 display: flex;
                 flex-direction: column;
                 // gap: 1rem;
-                justify-content: flex-start;
+                justify-content: center;
 
                 &__intro {
                     grid-column: 1/span 3;
                     grid-row: 1/ span 5;
+
+                    @media (max-width:56.25em) {
+                        grid-row: 1/ span 4;
+                    }
+
+                    @media (max-width:37.5em) {
+                        grid-column: 1/-1;
+                        grid-row: 1/span 2;
+                        flex-direction: row;
+
+                        &>div {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
 
                     &> :first-child {
                         display: flex;
@@ -89,7 +108,12 @@
                 &__experience {
                     grid-column: 4/ -1;
                     grid-row: 4/ span 5;
-                    justify-content: flex-start;
+
+                    @media (max-width:37.5em) {
+                        grid-column: 1/-1;
+                        grid-row: 6/span 5;
+                        justify-content: flex-start;
+                    }
 
                     & div {
                         &:nth-child(2) {
@@ -125,9 +149,24 @@
                 &__projects {
                     grid-column: 1/ span 3;
                     grid-row: 6/ span 4;
-                    justify-content: flex-start;
 
-                    // margin: auto 0;
+                    @media (max-width:56.25em) {
+                        grid-row: 5/ span 5;
+                        &-list li{
+                            flex-direction: column !important;
+                        }
+                    }
+
+                    @media (max-width:37.5em) {
+                        grid-column: 1/span 6;
+                        grid-row: 11/span 3;
+                        justify-content: flex-start;
+                        &-list li{
+                            flex-direction: row !important;
+                        }
+                    }
+
+
                     &-heading {
                         font-size: var(--step-0);
                         font-weight: 400;
@@ -138,7 +177,7 @@
                         margin-left: .2rem;
                         list-style-type: disc;
                         list-style-position: inside;
-                        font-size: var(--step-0);
+                        font-size: 1.5rem;
                         display: flex;
                         flex-direction: column;
                         gap: .5rem;
@@ -157,7 +196,7 @@
 
                             & span {
                                 &:nth-child(1) {
-                                    font-size: var(--step--2);
+                                    // font-size: var(--step--2);
                                     flex: 0 0 30%;
                                     display: flex;
                                     gap: 4px;
@@ -169,7 +208,6 @@
                                 }
 
                                 &:nth-child(3) {
-                                    font-size: var(--step--2);
                                     flex: 0 0 60%;
                                     text-align: start;
                                 }
@@ -181,7 +219,15 @@
                 &__skills {
                     grid-column: 1/ span 3;
                     grid-row: 10/ -1;
-                    justify-content: flex-start;
+
+                    @media (max-width:56.25em) {
+                        grid-row: 10/ -1;
+                    }
+
+                    @media (max-width:37.5em) {
+                        grid-column: 7/-1;
+                        grid-row: 15/-1;
+                    }
 
                     &-heading {
                         font-size: var(--step-0);
@@ -195,8 +241,13 @@
                         gap: .5rem;
 
                         & li {
-                            font-size: var(--step--2);
+                            // font-size: var(--step--2);
+                            font-size: 1.4rem;
                             flex: 0 0 calc(50% - .5rem);
+
+                            @media (max-width:56.25em) {
+                                flex: 0 0 100%;
+                            }
                         }
                     }
 
@@ -205,6 +256,11 @@
                 &__career-obj {
                     grid-column: 4/ -1;
                     grid-row: 1/ span 3;
+
+                    @media (max-width:37.5rem) {
+                        grid-column: 1/-1;
+                        grid-row: 3/span 3;
+                    }
 
                     &-heading {
                         font-size: var(--step-0);
@@ -222,6 +278,17 @@
                 &__dev-skills {
                     grid-column: 4/ span 4;
                     grid-row: 9/ -1;
+
+                    @media (max-width:37.5em) {
+
+                        grid-column: 7/-1;
+                        grid-row: 11/ span 4;
+
+                        &>div>div ul li {
+
+                            flex: 0 0 100%;
+                        }
+                    }
 
                     &-heading {
                         font-size: var(--step-0);
@@ -269,7 +336,7 @@
                                 row-gap: 4px;
 
                                 li {
-                                    font-size: 1.3rem;
+                                    font-size: 1.4rem;
                                     flex: 0 0 calc(50% - 4px);
 
                                     @media (max-width:900px) {
@@ -286,6 +353,13 @@
                     grid-column: 8/ -1;
                     grid-row: 9/ -1;
 
+                    @media (max-width:37.5em) {
+                        justify-content: flex-start;
+                        grid-column: 1/span 6;
+                        grid-row: 14/-1;
+                    }
+
+
                     & h3 {
                         font-size: var(--step-0);
                         font-weight: 400;
@@ -296,16 +370,6 @@
 
 
                 @media (max-width:600px) {
-                    &__intro {
-                        grid-column: 1/-1;
-                        grid-row: 1/span 2;
-                        flex-direction: row;
-
-                        &>div {
-                            display: flex;
-                            flex-direction: column;
-                        }
-                    }
 
                     &__career-obj {
                         grid-column: 1/-1;
@@ -316,40 +380,6 @@
                         grid-column: 1/-1;
                         grid-row: 6/span 5;
                         justify-content: flex-start;
-                    }
-
-                    &__projects {
-                        grid-column: 1/span 5;
-                        grid-row: 11/span 3;
-                        justify-content: flex-start;
-                    }
-
-                    &__dev-skills {
-                        grid-column: 6/-1;
-                        grid-row: 10/-1;
-                    }
-
-                    &__dev-skills {
-                        grid-column: 6/-1;
-                        grid-row: 11/ span 4;
-
-                        &>div>div ul li {
-                            // width: fit-content;
-                            // width: 100%;
-                            flex: 0 0 100%;
-                            // margin-right: 10px;
-                        }
-                    }
-
-                    &__skills {
-                        grid-column: 6/-1;
-                        grid-row: 15/-1;
-                    }
-
-                    &__achievements {
-                        justify-content: flex-start;
-                        grid-column: 1/span 5;
-                        grid-row: 14/-1;
                     }
                 }
 
