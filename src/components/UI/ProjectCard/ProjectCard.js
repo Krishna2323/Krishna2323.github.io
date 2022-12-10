@@ -70,9 +70,10 @@ const ProjectCard = (props) => {
             </div>
             <div className="project-links">
               {/* <button className="btn-secondary">More Details</button> */}
-              <button onClick={handleCardClick} className="btn-secondary">
+             {!project.notDeployed ? <button onClick={handleCardClick} className="btn-secondary">
                 View Project
-              </button>
+              </button> : <a className="btn-secondary" rel="noreferrer" target={"_blank"} href={project.link}>View on Github</a>}
+
             </div>
           </div>
         </div>

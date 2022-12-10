@@ -1,5 +1,6 @@
 .project-card {
-  width: clamp(max(25vw,25vh),30rem,max(30vw,30vh));
+  // width: clamp(max(25vw,25vh),35rem,max(35vw,35vh));
+  width: 100%;
   height: 32rem;
   background-color: transparent;
   perspective: 1000px;

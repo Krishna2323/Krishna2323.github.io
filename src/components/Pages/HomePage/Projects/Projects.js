@@ -7,7 +7,8 @@ import Omnifood from "../../../assets/Images/Hero-Sections/Omnifood.png"
 import Specs99 from "../../../assets/Images/Hero-Sections/Specs99.png"
 import Bankist from "../../../assets/Images/Hero-Sections/Bankist.png"
 import Portfolio from "../../../assets/Images/Hero-Sections/Portfolio.png"
-import { projects } from "./projectDetails";
+import { mernProjects, projects } from "./projectDetails";
+import { IoAlertCircle } from "react-icons/io5";
 
 
 
@@ -15,15 +16,14 @@ const Projects=()=>{
 
     return (
         <div className="projects-section container" id="projects">
-            <h3 className="heading-primary">Projects</h3>
+            <h3 className="heading-primary">Frontend Projects</h3>
             <div className="projects">
-                {/* <ProjectCard cardIndex={1} image={Natours} project={{name:"Natours",link:"https://natoursapp.herokuapp.com/"}}/> */}
-                {/* <ProjectCard cardIndex={2} image={Specs99} project={{name:"Specs99",link:"https://specs99v2.herokuapp.com/"}}/> */}
-                {/* <ProjectCard cardIndex={1} image={Omnifood} project={{name:"Omnifood",link:"https://lively-kleicha-55527e.netlify.app/"}}/>
-                <ProjectCard cardIndex={2} image={Forkify} project={{name:"Forkify",link:"https://quiet-travesseiro-698e66.netlify.app/"}}/>
-                <ProjectCard cardIndex={3} image={Bankist} project={{name:"Bankist",link:"https://magical-paprenjak-e2a068.netlify.app/"}}/>
-                <ProjectCard cardIndex={4} image={Portfolio} project={{name:"Portfolio",link:"https://natoursapp.herokuapp.com/"}}/> */}
-                {projects.map((project,i)=><ProjectCard project={project} index={i}/>)}
+            {projects.map((project,i)=><ProjectCard project={project} index={i}/>)}
+            </div>
+            <h3 className="heading-primary">MERN stack Projects</h3>
+            <span className="warning"><IoAlertCircle/> These projects may take 30-40 seconds to load as they are hosted on a free server.</span>
+            <div className="projects">
+            {mernProjects.map((project,i)=><ProjectCard project={project} index={i} />)}
             </div>
         </div>
     )

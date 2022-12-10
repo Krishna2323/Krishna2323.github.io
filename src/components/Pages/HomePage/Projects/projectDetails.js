@@ -4,6 +4,9 @@ import Bankist from "../../../assets/Images/Hero-Sections/Bankist.png"
 import Trillo from "../../../assets/Images/Hero-Sections/Trillo.png"
 import Natours from "../../../assets/Images/Hero-Sections/Natours-CSS.png"
 import Nexter from "../../../assets/Images/Hero-Sections/Nexter.png"
+import Specs99 from "../../../assets/Images/Hero-Sections/Specs99.png"
+import NatoursMern from "../../../assets/Images/Hero-Sections/Natours.png"
+
 
 
 export const projects = [
@@ -77,7 +80,7 @@ export const projects = [
     techStack: ["HTML, ", "CSS/SCSS, ", "JavaScript "],
     timeSpent: "1 Week",
     responsive: true,
-    link:"https://lively-kleicha-55527e.netlify.app/",
+    link:"https://magnificent-jelly-c82eb8.netlify.app",
     image:Trillo,
     projectDescription:
       "This project was focused on learning best practices with HTML, learning CSS from basics to some advanced technique and after that basics of SASS/SCSS. This project also tought me the techniques to build responsive websites using Grid/Flexbox.",
@@ -99,7 +102,7 @@ export const projects = [
     techStack: ["HTML, ", "CSS/SCSS, ", "JavaScript "],
     timeSpent: "1 Week",
     responsive: true,
-    link:"https://lively-kleicha-55527e.netlify.app/",
+    link:"https://kaleidoscopic-mermaid-71cdf7.netlify.app/",
     image:Natours,
     projectDescription:
       "This project was focused on learning best practices with HTML, learning CSS from basics to some advanced technique and after that basics of SASS/SCSS. This project also tought me the techniques to build responsive websites using Grid/Flexbox.",
@@ -121,7 +124,7 @@ export const projects = [
     techStack: ["HTML, ", "CSS/SCSS, ", "JavaScript "],
     timeSpent: "1 Week",
     responsive: true,
-    link:"https://lively-kleicha-55527e.netlify.app/",
+    link:"https://harmonious-lamington-202379.netlify.app",
     image:Nexter,
     projectDescription:
       "This project was focused on learning best practices with HTML, learning CSS from basics to some advanced technique and after that basics of SASS/SCSS. This project also tought me the techniques to build responsive websites using Grid/Flexbox.",
@@ -137,5 +140,53 @@ export const projects = [
       "Responsive Web Design",
       "Effects & Optimizations"
     ],
+  }
+];
+
+export const mernProjects = [
+  {
+    title: "Specs 99",
+    techStack: ["HTML, ", "CSS/SCSS, ", "JavaScript "],
+    timeSpent: "1 Month",
+    responsive: true,
+    link:"https://specs-99.onrender.com/",
+    image:Specs99,
+    projectDescription:
+      "This project was focused on learning best practices with HTML, learning CSS from basics to some advanced technique and after that basics of SASS/SCSS. This project also tought me the techniques to build responsive websites using Grid/Flexbox.",
+    conceptsCovered: [
+      "HTML fundamentals",
+      "CSS fundamentals",
+      "Floats",
+      "Flexbox",
+      "Grids",
+      "Web Design Rules",
+      "Components Pattern",
+      "Layout Patern",
+      "Responsive Web Design",
+      "Effects & Optimizations"
+    ],
+  },
+  {
+    title: "Natours",
+    techStack: ["HTML, ", "CSS/SCSS, ", "JavaScript "],
+    timeSpent: "1 Month",
+    responsive: true,
+    link:"https://github.com/Krishna2323/Natours",
+    image:NatoursMern,
+    projectDescription:
+      "This project was focused on learning best practices with HTML, learning CSS from basics to some advanced technique and after that basics of SASS/SCSS. This project also tought me the techniques to build responsive websites using Grid/Flexbox.",
+    conceptsCovered: [
+      "HTML fundamentals",
+      "CSS fundamentals",
+      "Floats",
+      "Flexbox",
+      "Grids",
+      "Web Design Rules",
+      "Components Pattern",
+      "Layout Patern",
+      "Responsive Web Design",
+      "Effects & Optimizations"
+    ],
+    notDeployed:true
   },
 ];

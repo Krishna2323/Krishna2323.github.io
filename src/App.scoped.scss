@@ -2,14 +2,16 @@
     width: 100%;
     border-radius: var(--br-sm);
     box-shadow: var(--box-shadow-dark);
-    background: white;
+    // background: white;
     overflow: hidden;
     color: var(--color-primary-dark);
     font-weight: 300;
-    background: var(--bg-dark-primary);
-    background: #1a1d20;
+    // background: var(--bg-dark-primary);
+    // background: #1a1d20;
     position: relative;
     height: 100%;
+        background: white;
+
 
     &-inner{
         width: 100%;
