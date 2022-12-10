@@ -9,6 +9,13 @@
   --opacity2: 1;
   opacity: 1;
 
+
+  @media (max-width:56.25em) {
+    flex: 0 0 fit-content;
+  }
+
+
+
   & iframe {
     width: 100vw;
     // height: 90vh;
@@ -25,6 +32,11 @@
   & .hero-text {
     flex: 0 0 50%;
     justify-content: flex-start;
+
+    @media (max-width:56.25em) {
+      flex: 0 0 fit-content;
+      justify-content: center;
+    }
 
     & p {
       margin: 2rem 0 0rem 0;
@@ -141,8 +153,11 @@
     }
 
     & .hero-images {
+      flex: 0 0 33rem !important;
+      margin-top: min(5vh,5vw);
+
       &>div {
-        width: 40%;
+        width: 37%;
 
         &:nth-child(1) {
           --translateY: -45% !important;
@@ -176,12 +191,16 @@
 
     &-text {
       text-align: center;
+      flex: 0 0 fit-content;
     }
 
     & .hero-images {
-      flex: 0 0 50% !important;
-      & > div {
-        width: min(45rem,65%);
+      flex: 0 0 60rem !important;
+      margin-top: min(-1vh,-1vw);
+
+
+      &>div {
+        width: min(45rem, 65%);
 
 
         &:nth-child(1) {

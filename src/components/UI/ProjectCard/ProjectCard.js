@@ -1,27 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./ProjectCard.scoped.scss";
 import { BsCheck2All } from "react-icons/bs";
 import { IoCloseOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { projectDisplaySliceAction } from "../../../store/ProjectDisplaySlice/ProjectDisplaySlice";
+import { addTab } from "../../../store/ProjectDisplaySlice/ProjectDisplayActions";
 
 const ProjectCard = (props) => {
   const dispacth = useDispatch();
   const { allTabs } = useSelector((state) => state.projectDisplay);
-  const { project,index } = props;
+  const { project, index } = props;
 
+  let animateCardClass=props.animate?"project-card--animate":"";
   const handleCardClick = (e) => {
-    dispacth(
-      projectDisplaySliceAction.updateTab({
-        xPosition: allTabs.length + 1,
-        currentTab: project.title,
-        updatedTabs: [...allTabs, { name: project.title, link: project.link }],
-      })
-    );
+    dispacth(addTab(project.title, project.link, allTabs));
   };
 
   return (
-    <div className="project-card" style={{ "--style": index }}>
+    <div className={`project-card ${animateCardClass}`} style={{ "--style": index }}>
       <div className="project-card-inner">
         <div className="project-card-front">
           <div className="project-card-front__inner">
@@ -32,22 +27,19 @@ const ProjectCard = (props) => {
             <div className="project-card-front__tech-stack">
               <span>
                 <span>
-                  {/* <ImStack />: */}
                   Tech Stack:
                 </span>
-                {project.techStack.map(e=>e)}
+                {project.techStack.map((e) => e)}
               </span>
               {/* ///////////////////////// */}
               <span>
                 {/* <BsClockHistory />: 2 Months{" "} */}
-                <span>Time Spent:</span>{project.timeSpent}
+                <span>Time Spent:</span>
+                {project.timeSpent}
               </span>
               <span>
                 <span>Responsive:</span>
-                {project.responsive?
-                <BsCheck2All />:
-                <IoCloseOutline />
-                }
+                {project.responsive ? <BsCheck2All /> : <IoCloseOutline />}
               </span>
             </div>
             {/* <div className="project-card-front__icons-div">
@@ -58,22 +50,32 @@ const ProjectCard = (props) => {
           <div className="project-card-back__inner">
             <div className="project-details">
               <span className="heading">Project Description:</span>
-              <p className="detail">
-                {project.projectDescription}
-              </p>
+              <p className="detail">{project.projectDescription}</p>
             </div>
             <div className="project-concepts">
               <span className="heading">Concepts Covered:</span>
               <ul className="concepts">
-                {project.conceptsCovered.map(e=><li>{e}</li>)}
+                {project.conceptsCovered.map((e) => (
+                  <li>{e}</li>
+                ))}
               </ul>
             </div>
             <div className="project-links">
               {/* <button className="btn-secondary">More Details</button> */}
-             {!project.notDeployed ? <button onClick={handleCardClick} className="btn-secondary">
-                View Project
-              </button> : <a className="btn-secondary" rel="noreferrer" target={"_blank"} href={project.link}>View on Github</a>}
-
+              {!project.notDeployed ? (
+                <button onClick={handleCardClick} className="btn-secondary">
+                  View Project
+                </button>
+              ) : (
+                <a
+                  className="btn-secondary"
+                  rel="noreferrer"
+                  target={"_blank"}
+                  href={project.link}
+                >
+                  View on Github
+                </a>
+              )}
             </div>
           </div>
         </div>

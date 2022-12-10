@@ -5,8 +5,11 @@
   background-color: transparent;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
-  animation: fadeIn .5s ease-in-out calc(var(--style) * 300ms + 5s) forwards;
   opacity: 0;
+  
+  &--animate{
+    animation: fadeIn .5s ease-in-out calc(var(--style) * 400ms + .5s) forwards;
+  }
 
   &-inner {
     position: relative;
