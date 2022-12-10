@@ -4,7 +4,7 @@
     overflow: hidden;
     transition: all .5s;
 
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         top: 0;
@@ -16,10 +16,26 @@
         transition: all .5s;
     }
 
-    &:hover{
+    &:hover {
         transform: scale(1.05);
-        &::after{
+
+        &::after {
             transform: translateX(-20%);
         }
+    }
+}
+
+@mixin link-hover-primary {
+    cursor: pointer;
+    position: relative;
+    transition: all .4s;
+
+    &:hover {
+        color: #e95b8d;
+        // filter: brightness(100%);
+        // background: #e95b8d;
+        // background-clip: text;
+        font-weight: 300;
+        // -webkit-background-c/lip: text;
     }
 }

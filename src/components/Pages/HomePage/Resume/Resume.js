@@ -4,8 +4,18 @@ import * as AiIcons from "react-icons/ai";
 import * as MdIcons from "react-icons/md";
 import * as BsIcons from "react-icons/bs";
 import * as HiIcons from "react-icons/hi2";
+import { useDispatch, useSelector } from "react-redux";
+import { addTab } from "../../../../store/ProjectDisplaySlice/ProjectDisplayActions";
 
 const Resume = () => {
+  const dispacth = useDispatch();
+  const { allTabs } = useSelector((state) => state.projectDisplay);
+
+  const handleProjectLink=(e)=>{
+    let {dataset} =e.target.closest("li")
+    dispacth(addTab(dataset.projectName, dataset.projectLink, allTabs));
+
+  }
   return (
     <section id="resume" className="resume container">
       <h3 className="heading-primary">Resume</h3>
@@ -76,6 +86,7 @@ const Resume = () => {
                   href="https://github.com/meshery/meshery.io/pull/870"
                   target={"_blank"}
                   className="link"
+                  rel="noreferrer"
                 >
                   PR link
                 </a>
@@ -84,6 +95,7 @@ const Resume = () => {
                   href="https://github.com/meshery/meshery.io/pull/918"
                   target={"_blank"}
                   className="link"
+                  rel="noreferrer"
                 >
                   PR link
                 </a>
@@ -108,49 +120,49 @@ const Resume = () => {
           <div className="block block__projects">
             <span className="block__projects-heading">Projects </span>
             <ul className="block__projects-list">
-              <li>
+              <li onClick={handleProjectLink} data-project-name="Forkify" data-project-link="https://quiet-travesseiro-698e66.netlify.app/">
                 <span>
                   Forkify
                   <AiIcons.AiOutlineLink />
                 </span>{" "}
-                <HiIcons.HiArrowLongRight /> <span>HTML, SCSS, Javascript</span>
+                <HiIcons.HiArrowLongRight /> <span>HTML, SCSS, JavaScript</span>
               </li>
-              <li>
+              <a href="https://github.com/Krishna2323/Natours" target={"_blank"} rel="noreferrer" >
                 <span>
                   Natours
                   <AiIcons.AiOutlineLink />
                 </span>{" "}
                 <HiIcons.HiArrowLongRight />{" "}
-                <span>MERN, Redux, SCSS, Stripe </span>
-              </li>
-              <li>
+                <span>MERN, AWS, Stripe, MUI </span>
+              </a>
+              <li onClick={handleProjectLink} data-project-name="Specs99" data-project-link="hhttps://specs-99.onrender.com/">
                 <span>
                   Specs99
                   <AiIcons.AiOutlineLink />
                 </span>{" "}
                 <HiIcons.HiArrowLongRight />{" "}
-                <span>MERN, Redux, SCSS, Stripe</span>
+                <span>MERN, AWS, Stripe, MUI </span>
               </li>
-              <li>
+              <li onClick={handleProjectLink} data-project-name="Omnifood" data-project-link="https://lively-kleicha-55527e.netlify.app/">
                 <span>
-                  Bancker
+                  Omnifood
                   <AiIcons.AiOutlineLink />
                 </span>{" "}
-                <HiIcons.HiArrowLongRight /> <span>HTML, SCSS, Javascript</span>
+                <HiIcons.HiArrowLongRight /> <span>HTML, SCSS, JavaScript</span>
               </li>
-              <li>
+              <li onClick={handleProjectLink} data-project-name="Trillo" data-project-link="https://magnificent-jelly-c82eb8.netlify.app">
                 <span>
-                  Real
+                  Trillo
                   <AiIcons.AiOutlineLink />
                 </span>{" "}
-                <HiIcons.HiArrowLongRight /> <span>HTML, SCSS, Javascript</span>
+                <HiIcons.HiArrowLongRight /> <span>HTML, SCSS, JavaScript</span>
               </li>
-              <li>
+              <li onClick={handleProjectLink} data-project-name="Bankist" data-project-link="https://magical-paprenjak-e2a068.netlify.app/">
                 <span>
-                  Forkify
+                  Bankist
                   <AiIcons.AiOutlineLink />
                 </span>{" "}
-                <HiIcons.HiArrowLongRight /> <span>HTML, SCSS, Javascript</span>
+                <HiIcons.HiArrowLongRight /> <span>HTML, SCSS, JavaScript</span>
               </li>
             </ul>
           </div>
@@ -212,6 +224,18 @@ const Resume = () => {
           </div>
           <div className="block block__achievements">
             <h3>Achievements & Course Completions</h3>
+            <ul>
+              <li>HackerRank Problem Solving: <AiIcons.AiFillStar/><AiIcons.AiFillStar/><AiIcons.AiFillStar/><AiIcons.AiFillStar/><AiIcons.AiFillStar/></li>
+              <li><a href="https://www.udemy.com/course/the-complete-javascript-course/" rel="noreferrer" target={"_blank"}>The Complete JavaScript Course: <BsIcons.BsCheck2All/></a></li>
+              <li><a href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/" rel="noreferrer" target={"_blank"}>HTML and CSS Course: <BsIcons.BsCheck2All/></a></li>
+              <li><a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" rel="noreferrer" target={"_blank"}>The Complete Web Development Bootcamp: <BsIcons.BsCheck2All/></a></li>
+              <li><a href="https://www.udemy.com/course/advanced-css-and-sass/" rel="noreferrer" target={"_blank"}>Advanced CSS and Sass Course: <BsIcons.BsCheck2All/></a></li>
+              <li><a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/" rel="noreferrer" target={"_blank"}>React - The Complete Guide: <BsIcons.BsCheck2All/></a></li>
+              <li><a href="https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/" rel="noreferrer" target={"_blank"}>The Complete Node.js Bootcamp <BsIcons.BsCheck2All/></a></li>
+              <li><a href="https://www.udemy.com/course/typescript-the-complete-developers-guide/" rel="noreferrer" target={"_blank"}>Typescript: The Complete Guide: <BsIcons.BsCheck2All/></a></li>
+              <li><a href="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/" rel="noreferrer" target={"_blank"}>Algorithms and Data Structures Masterclass: <BsIcons.BsCheck2All/></a></li>
+              <li><a href="https://www.udemy.com/course/docker-kubernetes-the-practical-guide/" rel="noreferrer" target={"_blank"}>Docker & Kubernetes: The Practical Guide: <BsIcons.BsCheck2All/></a></li>
+            </ul>
           </div>
           {/* <div className="block block-7"></div> */}
         </div>
