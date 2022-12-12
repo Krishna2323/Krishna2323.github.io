@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7f4f55e.css",
+    "main.css": "/static/css/main.eb84695c.css",
     "main.js": "/static/js/main.8ab851ef.js",
     "static/media/Natours-CSS.png": "/static/media/Natours-CSS.50bb8dd2260c751fef8a.png",
     "static/media/Natours.png": "/static/media/Natours.47c1dd11dc7732b7055d.png",
@@ -12,11 +12,11 @@
     "static/media/profile-picture.png": "/static/media/profile-picture.236f0098e7f27d921910.png",
     "static/media/Bankist.png": "/static/media/Bankist.8680b6d88d060346cef9.png",
     "index.html": "/index.html",
-    "main.d7f4f55e.css.map": "/static/css/main.d7f4f55e.css.map",
+    "main.eb84695c.css.map": "/static/css/main.eb84695c.css.map",
     "main.8ab851ef.js.map": "/static/js/main.8ab851ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7f4f55e.css",
+    "static/css/main.eb84695c.css",
     "static/js/main.8ab851ef.js"
   ]
 }
